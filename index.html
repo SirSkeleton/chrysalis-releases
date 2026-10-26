@@ -5,6 +5,7 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Chrysalis · Tu segundo cerebro</title>
 <meta name="description" content="Chrysalis: notas enlazadas, grafo, mapas mentales y biblioteca en tu computador. Descarga gratis para Windows.">
+<link rel="icon" type="image/png" href="img/favicon.png">
 <meta name="theme-color" content="#0f0f0d">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -21,7 +22,8 @@ nav{display:flex;flex-wrap:wrap;gap:16px;align-items:center;justify-content:spac
 nav .links{display:flex;gap:28px;font-size:14px}
 h1,h2{font-family:Fraunces,serif;font-weight:500;margin:0}
 .hero{display:flex;flex-direction:column;align-items:center;text-align:center;gap:26px;padding:72px 0 48px}
-.rule{width:56px;height:1px;background:var(--gold)}
+.brand{display:flex;align-items:center;gap:12px}.brand img{display:block;border-radius:6px}
+.emblem{display:block;height:auto;max-width:120px;border-radius:12px}
 .hero h1{font-size:clamp(38px,7vw,68px);line-height:1.06;max-width:860px;letter-spacing:-.01em}
 .hero h1 span{color:var(--gold)}
 .hero p{margin:0;font-size:18px;line-height:1.65;color:var(--muted);max-width:600px}
@@ -77,9 +79,9 @@ footer{border-top:1px solid var(--border);padding:24px 0;display:flex;flex-wrap:
 </head>
 <body>
 <div class="wrap">
-<nav><span class="logo">Chrysalis</span><div class="links"><a href="#funciones">Funciones</a><a href="#instalar">Instalación</a><a href="#versiones">Versiones</a></div></nav>
+<nav><span class="brand"><img src="img/icono.webp" width="28" height="42" alt=""><span class="logo">Chrysalis</span></span><div class="links"><a href="#funciones">Funciones</a><a href="#instalar">Instalación</a><a href="#versiones">Versiones</a></div></nav>
 <header class="hero">
-<div class="rule"></div>
+<img class="emblem" src="img/icono.webp" width="120" height="180" alt="Icono de Chrysalis">
 <h1>Las ideas no viven aisladas. <span>Chrysalis las conecta.</span></h1>
 <p>Un segundo cerebro que vive en tu computador. Notas, grafo, mapas mentales y biblioteca, todo enlazado.</p>
 <div class="cta">
@@ -93,7 +95,6 @@ footer{border-top:1px solid var(--border);padding:24px 0;display:flex;flex-wrap:
 <div class="shot"><div class="bar"><i></i><i></i><i></i></div>
 <img src="img/grafo.webp" width="1600" height="1000" alt="Vista de grafo de Chrysalis con nodos de cerebro de colores conectados">
 </div>
-<p class="cap">Captura real de Chrysalis con datos de ejemplo.</p>
 </div>
 
 <section id="funciones">
