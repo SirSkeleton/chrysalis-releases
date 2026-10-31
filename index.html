@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Chrysalis · Tu segundo cerebro</title>
-<meta name="description" content="Chrysalis: notas enlazadas, grafo, mapas mentales y biblioteca en tu computador. Descarga gratis para Windows.">
+<meta name="description" content="Chrysalis: notas enlazadas, grafo, mapas mentales y biblioteca en tu computador. Descarga gratis para Windows y Android.">
 <link rel="icon" type="image/png" href="img/favicon.png">
 <meta name="theme-color" content="#0f0f0d">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -33,6 +33,11 @@ h1,h2{font-family:Fraunces,serif;font-weight:500;margin:0}
 .btn.ghost{background:none;border:1px solid #3a3628;color:var(--text);font-weight:400}
 .btn.ghost:hover{border-color:var(--gold);background:none;color:var(--text)}
 .dl-meta{font-size:13px;color:var(--dim)}
+.dl-metas{display:flex;flex-direction:column;gap:2px;align-items:center}
+.steps h3{font-family:Fraunces,serif;font-weight:500;font-size:20px;margin:0 0 14px;color:var(--gold)}
+.steps .col{flex:1 1 420px;display:flex;flex-direction:column;gap:32px}
+.steps .col ol{flex:none}
+.plat{font-size:12px;color:var(--dim);border:1px solid var(--border);border-radius:99px;padding:3px 10px}
 .shot{background:var(--surface);border:1px solid var(--border);border-radius:14px;overflow:hidden;box-shadow:0 40px 90px rgba(0,0,0,.6)}
 .shot .bar{display:flex;gap:8px;padding:12px 16px;border-bottom:1px solid var(--border);background:#121110}
 .shot .bar i{width:11px;height:11px;border-radius:50%;background:#2e2b22}
@@ -83,12 +88,16 @@ footer{border-top:1px solid var(--border);padding:24px 0;display:flex;flex-wrap:
 <header class="hero">
 <img class="emblem" src="img/icono.png" width="253" height="380" alt="Icono de Chrysalis">
 <h1>Las ideas no viven aisladas. <span>Chrysalis las conecta.</span></h1>
-<p>Un segundo cerebro que vive en tu computador. Notas, grafo, mapas mentales y biblioteca, todo enlazado.</p>
+<p>Un segundo cerebro que vive en tu computador y viene contigo en el celular. Notas, grafo, mapas mentales y biblioteca, todo enlazado.</p>
 <div class="cta">
 <a id="dl-btn" class="btn" href="https://github.com/SirSkeleton/chrysalis-releases/releases/latest"><span id="dl-text">Descargar para Windows</span></a>
-<a class="btn ghost" href="#versiones">Ver versiones</a>
+<a id="dl-apk" class="btn" href="https://github.com/SirSkeleton/chrysalis-releases/releases"><span id="dl-apk-text">Descargar para Android</span></a>
 </div>
+<div class="dl-metas">
 <div id="dl-meta" class="dl-meta">Windows 10 / 11</div>
+<div id="dl-apk-meta" class="dl-meta">Android 7 o superior</div>
+</div>
+<a class="btn ghost" href="#versiones">Ver versiones</a>
 </header>
 
 <div style="padding-bottom:88px">
@@ -108,12 +117,21 @@ footer{border-top:1px solid var(--border);padding:24px 0;display:flex;flex-wrap:
 </section>
 
 <section id="instalar" class="steps">
-<div><h2>Tres pasos</h2><p>Tus notas se guardan en tu equipo. Sin cuenta, sin suscripción. Chrysalis te avisa cuando hay una versión nueva.</p></div>
+<div><h2>Tres pasos</h2><p>Tus notas se guardan en tu equipo. Sin cuenta, sin suscripción. La app de PC te avisa cuando hay una versión nueva. El celular se conecta con el PC por Wi-Fi para sincronizar.</p></div>
+<div class="col">
+<div><h3>En el PC (Windows)</h3>
 <ol>
 <li><span>1</span>Descarga el instalador.</li>
 <li><span>2</span>Ábrelo. Si Windows avisa de SmartScreen, elige "Más información" y "Ejecutar de todas formas".</li>
 <li><span>3</span>Abre Chrysalis y sigue el tutorial de bienvenida.</li>
-</ol>
+</ol></div>
+<div><h3>En el celular (Android)</h3>
+<ol>
+<li><span>1</span>Descarga el archivo APK desde el celular.</li>
+<li><span>2</span>Ábrelo y, si Android lo pide, permite instalar apps de esta fuente.</li>
+<li><span>3</span>Para sincronizar: en el PC abre "Sincronizar con celular" y en el celular ve a Módulos y luego Sincronizar.</li>
+</ol></div>
+</div>
 </section>
 
 <section id="versiones">
@@ -123,13 +141,18 @@ footer{border-top:1px solid var(--border);padding:24px 0;display:flex;flex-wrap:
 <button type="button" data-f="estable" aria-pressed="false">Estables</button>
 <button type="button" data-f="menor" aria-pressed="false">Cambios menores</button>
 <button type="button" data-f="prueba" aria-pressed="false">Prueba</button>
+<button type="button" data-f="windows" aria-pressed="false">Windows</button>
+<button type="button" data-f="android" aria-pressed="false">Android</button>
 </div>
 <div id="list"><div class="empty">Cargando versiones...</div></div>
 </section>
 
 <section class="final">
 <h2>Listo para conectar tus ideas</h2>
-<a id="dl-btn2" class="btn" href="https://github.com/SirSkeleton/chrysalis-releases/releases/latest">Descargar Chrysalis</a>
+<div class="cta">
+<a id="dl-btn2" class="btn" href="https://github.com/SirSkeleton/chrysalis-releases/releases/latest">Descargar para Windows</a>
+<a id="dl-apk2" class="btn" href="https://github.com/SirSkeleton/chrysalis-releases/releases">Descargar para Android</a>
+</div>
 </section>
 
 <footer><span>Chrysalis · SirSkeleton</span><a href="https://github.com/SirSkeleton/chrysalis-releases/releases">Todas las releases</a></footer>
@@ -147,10 +170,13 @@ footer{border-top:1px solid var(--border);padding:24px 0;display:flex;flex-wrap:
     if (m && m[3] !== '0') return 'menor';
     return 'estable';
   }
-  function exeOf(r) {
-    for (var i = 0; i < r.assets.length; i++) if (/\.exe$/i.test(r.assets[i].name)) return r.assets[i];
+  function assetOf(r, re) {
+    for (var i = 0; i < r.assets.length; i++) if (re.test(r.assets[i].name)) return r.assets[i];
     return null;
   }
+  function exeOf(r) { return assetOf(r, /\.exe$/i); }
+  function apkOf(r) { return assetOf(r, /\.apk$/i); }
+  function platform(r) { return apkOf(r) && !exeOf(r) ? 'android' : 'windows'; }
   function fmtDate(s) {
     try { return new Date(s).toLocaleDateString('es-CL', { year: 'numeric', month: 'long', day: 'numeric' }); } catch (e) { return ''; }
   }
@@ -165,21 +191,27 @@ footer{border-top:1px solid var(--border);padding:24px 0;display:flex;flex-wrap:
   function render() {
     var list = document.getElementById('list');
     list.textContent = '';
-    var shown = releases.filter(function (r) { return filter === 'todas' || kind(r) === filter; });
+    var shown = releases.filter(function (r) { return filter === 'todas' || kind(r) === filter || platform(r) === filter; });
     if (!shown.length) { list.appendChild(el('div', 'empty', 'No hay versiones en esta categoría todavía.')); return; }
     shown.forEach(function (r) {
-      var k = kind(r), exe = exeOf(r);
+      var k = kind(r), exe = exeOf(r), apk = apkOf(r);
       var card = el('div', 'rel');
       var head = el('div', 'rel-head');
       var t = el('div', 'rel-title');
       t.appendChild(el('span', 'ver', r.name || r.tag_name));
       t.appendChild(el('span', 'badge b-' + k, LABEL[k]));
+      t.appendChild(el('span', 'plat', platform(r) === 'android' ? 'Android' : 'Windows'));
       t.appendChild(el('span', 'date', fmtDate(r.published_at)));
       head.appendChild(t);
       if (exe) {
         var a = el('a', 'get', 'Descargar · ' + mb(exe.size));
         a.href = exe.browser_download_url;
         head.appendChild(a);
+      }
+      if (apk) {
+        var b = el('a', 'get', 'Descargar APK · ' + mb(apk.size));
+        b.href = apk.browser_download_url;
+        head.appendChild(b);
       }
       card.appendChild(head);
       if (r.body && r.body.trim()) {
@@ -206,9 +238,17 @@ footer{border-top:1px solid var(--border);padding:24px 0;display:flex;flex-wrap:
     .then(function (res) { if (!res.ok) throw new Error(res.status); return res.json(); })
     .then(function (data) {
       releases = data.filter(function (r) { return !r.draft; });
-      var latest = null;
+      var latest = null, latestApk = null;
       for (var i = 0; i < releases.length; i++) {
-        if (!releases[i].prerelease && exeOf(releases[i])) { latest = releases[i]; break; }
+        if (!latest && !releases[i].prerelease && exeOf(releases[i])) latest = releases[i];
+        if (!latestApk && !releases[i].prerelease && apkOf(releases[i])) latestApk = releases[i];
+      }
+      if (latestApk) {
+        var apk = apkOf(latestApk);
+        document.getElementById('dl-apk').href = apk.browser_download_url;
+        document.getElementById('dl-apk2').href = apk.browser_download_url;
+        document.getElementById('dl-apk-text').textContent = 'Descargar para Android';
+        document.getElementById('dl-apk-meta').textContent = (latestApk.name || latestApk.tag_name) + ' · ' + mb(apk.size) + ' · ' + fmtDate(latestApk.published_at) + ' · Android 7 o superior';
       }
       if (latest) {
         var exe = exeOf(latest);

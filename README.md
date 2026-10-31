@@ -1,10 +1,10 @@
 # Chrysalis
 
-Tu segundo cerebro en tu computador: notas, grafo, mapas mentales y biblioteca, todo conectado.
+Tu segundo cerebro en tu computador y en tu celular: notas, grafo, mapas mentales y biblioteca, todo conectado.
 
 **Descarga:** https://sirskeleton.github.io/chrysalis-releases/
 
-Los instaladores están en la sección [Releases](../../releases). El código fuente de Chrysalis es privado; este repositorio solo contiene la página de descarga y las versiones publicadas.
+Los instaladores (Windows, `.exe`) y el APK de Android están en la sección [Releases](../../releases). Las versiones del celular llevan el tag `movil-vX.Y.Z`. El código fuente de Chrysalis es privado; este repositorio solo contiene la página de descarga y las versiones publicadas.
 
 ## Tipos de versión
 
